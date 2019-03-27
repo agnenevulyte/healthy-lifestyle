@@ -1,0 +1,22 @@
+ul li {
+    color: white;
+    text-align: left;
+}
+
+.panel-title {
+    color: white;
+    margin-top: 14px;
+}
+
+@media (max-width: 575px) {
+    .screen-accordion {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .mobile-accordion {
+        display: none;
+    }
+}
+

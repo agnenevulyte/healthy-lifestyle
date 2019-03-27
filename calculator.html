@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/calculator.css" />
+    <!-- <script src="scripts/stopwatch.js"></script> -->
+</head>
+
+<body>
+        <form name="calculator">
+                <table id="calctable">
+                   <tr id="calcShowScreen">
+                      <td colspan="4">
+                         <input type="text" name="display" id="display" disabled>
+                      </td>
+                   </tr>
+                   <tr class="calcinside">
+                      <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                      <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                      <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                      <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+                   </tr>
+                   <tr class="calcinside">
+                      <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                      <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                      <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                      <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+                   </tr>
+                   <tr class="calcinside">
+                      <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                      <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                      <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+                      <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+                   </tr>
+                   <tr class="calcinside">
+                      <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+                      <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                      <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                      <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+                   </tr>
+                </table>
+             </form>
+    
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

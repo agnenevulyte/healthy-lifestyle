@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/quotes-bmi.css" />
+    <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
+    <!-- <script src="todojs.js"></script> -->
+    <!-- <script src="todo.js"></script> -->
+</head>
+
+<body>
+
+    <!-- <button id="button" class="new_quote">New Quote</button> -->
+    <!-- <a id="tweet" title="Tweet this quote!" target="_blank" href="https://twitter.com/intent/tweet">Tweet</a> -->
+    <div id="box" style="border: 1px solid purple">
+        <h4 class="title"></h4>
+        <h2 class="content"></h2>
+    </div>
+
+    <div>
+        <div class="row">
+            <div class="col-sm-6 col-md-2">
+                Weight:<br>
+                <input type="number" id="weight" placeholder="Enter your weight"> kg <br>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                Height:<br>
+                <input type="number" id="height" placeholder="Enter your height"> m <br>
+            </div>
+        </div><br>
+        <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-md-4">
+                <button id="BMIbutton" onclick="calculateBMI()">Calculate BMI</button>
+            </div>
+        </div>
+        <div class="row justify-content-md-center"></div>
+            <div class="col-sm-12 col-md-1">
+                <h4 id="BMI"></h4>
+            </div>
+        </div>
+        
+    </div>
+
+
+<script>
+
+var posts = [
+    {
+        "title": "Ghandi",
+        "content": '“Strength does not come from the physical capacity. It comes from an indomitable will.” '
+    },
+    {
+        "title": "Arnold Schwarzenegger",
+        "content": '"Training gives us an outlet for suppressed energies created by stress and thus tones the spirit just as exercise conditions the body."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"Your body can stand almost anything. It’s your mind that you have to convince."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"Fitness is like a relationship. You can’t cheat and expect it to work."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"My protein shake brings the boys to the yard. And they’re like: your muscles are hard. Damn right, my muscles are hard. I could train ya, but I’d have to charge."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"Respect your body. It’s the only one you get."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"Dead last finish is greater than did not finish, which trumps did not start."'
+    },
+    {
+        "title": "Abraham Lincoln",
+        "content": '"The best way to predict the future is to create it."'
+    },
+    {
+        "title": "Frank Ocean",
+        "content": '"Work hard in silence. Let success be your noise."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"Rome wasn’t built in a day, but they worked on it every single day."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"Use the 21/90 rule: It takes 21 days to create a habit. It takes 90 days to create a lifestyle."'
+    },
+    {
+        "title": "Unknown",
+        "content": '"Strive for progress, not perfection."'
+    }
+]
+// $(".new_quote").click(function(){
+//   getQuote();
+// })
+
+function getQuote() {
+    var item = posts[Math.floor(Math.random()*posts.length)];
+    var title = $(".title").text(item.title);
+    var quote = $(".content").html(item["content"]);
+    // var encoded = encodeURIComponent($(item.content).text() + " - " + item.title);
+    // $('#tweet').attr("href", "https://twitter.com/intent/tweet?text=" + encoded);
+};
+getQuote()
+
+function calculateBMI() {
+    var height = document.getElementById("height").value;
+    var weight = document.getElementById("weight").value;
+    var calculation = weight / (height*height);
+    var roundedCalc = calculation.toFixed(5)
+    document.getElementById("BMI").innerHTML = roundedCalc;
+}
+</script>
+</body>
+
+</html>

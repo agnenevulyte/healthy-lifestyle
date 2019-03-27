@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/stopwatch.css" />
+    <script src="scripts/stopwatch.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+            <h1 id="tagName"><time>00:00:00</time></h1>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+            <button id="start">start</button>
+            </div>
+            <div class="col-sm-1">
+            <button id="stop">stop</button>
+            </div>
+            <div class="col-sm-1">
+            <button id="clear">clear</button>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-5"></div>
+        </div>
+    </div>
+
+
+    <script>
+    function stopWatch() {
+        var time = document.getElementById('tagName');
+        var start = document.getElementById("start");
+        var stop = document.getElementById("stop");
+        var clear = document.getElementById("clear");
+        var seconds = 0;
+        var minutes = 0;
+        var hours = 0;
+        var t;
+
+        function add() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes >=60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+            time.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+            timer();
+        }
+
+        function timer() {
+            t = setTimeout(add, 1000);
+        }
+      
+
+        start.onclick = timer;
+        stop.onclick = function(){
+            clearTimeout(t);
+        }
+        clear.onclick =  function(){
+            time.textContent = "00:00:00"
+            seconds = 0;
+            minutes=0;
+            hours = 0;
+        }
+    }
+
+    stopWatch();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+#calctable {
+    border: 3px solid purple;
+    margin: 0 auto;
+    text-align: center;
+}
+#calcShowScreen td input {
+    width: 280px;
+    height: 70px;
+}
+.calcinside td {
+    border: 1px solid purple;
+}
+.calcinside td input{
+    width: 70px;
+    height: 70px;
+    font-size: 20px
+}

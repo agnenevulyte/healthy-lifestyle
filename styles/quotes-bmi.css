@@ -1,0 +1,24 @@
+body {
+    /* margin-top:70px; */
+    text-align: center;
+  }
+  
+  #box {
+    border: 1px solid black;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+    /* border: 1px solid purple; */
+  }
+  @media(max-width: 767px) {
+    #box {
+      width: 100%;
+      border: 0;
+      padding: 0;
+    }
+
+  }
+  
