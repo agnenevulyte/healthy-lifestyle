@@ -151,3 +151,11 @@ function topFunction() {
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 }
+
+
+// $(function() {
+//     $('.scroll-down').click (function() {
+//       $('html, body').animate({scrollTop: $('#box').offset().top }, 'slow');
+//       return false;
+//     });
+//   });
