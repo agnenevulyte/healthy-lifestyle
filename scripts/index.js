@@ -108,6 +108,15 @@ function getQuote() {
 };
 $( document ).ready(function() {
     getQuote();
+    $("#height").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#BMIbutton").click();
+        }
+    });
+    
+    $("#BMIbutton").click(function() {
+        calculateBMI();
+      });
 });
 
 function calculateBMI() {
@@ -135,6 +144,7 @@ function calculateBMI() {
         BMIexplanation.style.color = "red";
     }
 }
+
 
 window.onscroll = function() {scrollFunction()};
 
