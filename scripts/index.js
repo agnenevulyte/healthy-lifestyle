@@ -114,9 +114,9 @@ function calculateBMI() {
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
     var BMI = weight / (height * height);
-    var roundedBMI = BMI.toFixed(5)
-    document.getElementById("BMI").innerHTML = roundedBMI;
-    document.getElementById("BMItext").innerHTML = "YOUR BMI:"
+    var roundedBMI = BMI.toFixed(5);
+    document.getElementById("BMItext").style.display = "inline-block";
+    document.getElementById("BMI").text = roundedBMI;
     var BMIexplanation = document.getElementById("BMIexplanation");
     if (BMI <= 18.4) {
         BMIexplanation.innerHTML = "You are underweight";

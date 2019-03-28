@@ -89,7 +89,7 @@ p {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 460px) {
     #blockBMI .col-xs-6 {
         width: 100%;
     }
