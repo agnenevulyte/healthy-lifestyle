@@ -127,21 +127,39 @@ function calculateBMI() {
     document.getElementById("BMItext").innerHTML = "YOUR BMI: ";
     document.getElementById("BMI").innerHTML = roundedBMI;
     var BMIexplanation = document.getElementById("BMIexplanation");
-    if (BMI <= 18.4) {
+    if (roundedBMI <= 18.4) {
         BMIexplanation.innerHTML = "You are underweight";
         BMIexplanation.style.color = "red";
-    } else if (BMI <= 24.9) {
+        document.getElementById("BMI-calc").style.display = "block";
+    } else if (roundedBMI <= 24.9) {
         BMIexplanation.innerHTML = "You are healthful weight";
         BMIexplanation.style.color = "green";
-    } else if (BMI <= 29.9) {
+        document.getElementById("BMI-calc").style.display = "block";
+    } else if (roundedBMI <= 29.9) {
         BMIexplanation.innerHTML = "You are overweight";
         BMIexplanation.style.color = "red";
-    } else if (BMI <= 39.9) {
+        document.getElementById("BMI-calc").style.display = "block";
+    } else if (roundedBMI <= 39.9) {
         BMIexplanation.innerHTML = "You have obesity";
         BMIexplanation.style.color = "red";
+        document.getElementById("BMI-calc").style.display = "block";
     } else {
         BMIexplanation.innerHTML = "You have an extreme obesity";
         BMIexplanation.style.color = "red";
+        document.getElementById("BMI-calc").style.display = "block";
+    }
+    if (height == false && weight == false) {
+        BMIexplanation.innerHTML = "Please enter your measurements and try again";
+        BMIexplanation.style.color = "yellow";
+        document.getElementById("BMI-calc").style.display = "none";
+    } else if (height == false) {
+        BMIexplanation.innerHTML = "Please enter your height in meters and try again";
+        BMIexplanation.style.color = "yellow";
+        document.getElementById("BMI-calc").style.display = "none";
+    } else if (weight == false) {
+        BMIexplanation.innerHTML = "Please enter your weight in kilograms and try again";
+        BMIexplanation.style.color = "yellow";
+        document.getElementById("BMI-calc").style.display = "none";
     }
 }
 
