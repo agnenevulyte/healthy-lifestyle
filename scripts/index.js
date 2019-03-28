@@ -1,54 +1,3 @@
-// calculate BMI
-// function calculateBMI() {
-//     var height = document.getElementById("height").value;
-//     var weight = document.getElementById("weight").value;
-//     var calculation = weight / (height*height);
-//     var roundedCalc = calculation.toFixed(5)
-//     document.getElementById("BMI").innerHTML = roundedCalc;
-// }
-
-
-// function Stopwatch() {
-//     let startTime, endTime, running, duration = 0;
-
-//     this.start = function(){
-//         if (running) {
-//             throw new Error('Stopwatch has already started');
-//         };
-//         running = true;
-//         startTime = new Date();
-
-//     };
-
-//     this.stop = function(){
-//         if (!running) {
-//             throw new Error('Stopwatch is not started');
-//         };
-//         running = false;
-//         endTime = new Date();
-//         const seconds = (endTime.getTime() - startTime.getTime()) / 1000;
-//         duration+=seconds;
-//     };
-
-//     this.reset = function(){
-//         startTime = null;
-//         endTime = null;
-//         running = false;
-//         duration = 0;
-//     };
-
-//     Object.defineProperty(this, "duration", {
-//         get: function() {
-//             return duration;
-//         }
-//     });
-// }
-
-// const sw = new Stopwatch();
-// console.log(sw)
-
-
-
 // get quote
 var posts = [
     {
@@ -64,20 +13,12 @@ var posts = [
         "content": '"Your body can stand almost anything. It’s your mind that you have to convince."'
     },
     {
-        "title": "Unknown",
-        "content": '"Fitness is like a relationship. You can’t cheat and expect it to work."'
+        "title": "Kerri Walsh Jennings",
+        "content": "'It’s going to be a journey. It’s not a sprint to get in shape.'"
     },
     {
-        "title": "Unknown",
-        "content": '"My protein shake brings the boys to the yard. And they’re like: your muscles are hard. Damn right, my muscles are hard. I could train ya, but I’d have to charge."'
-    },
-    {
-        "title": "Unknown",
-        "content": '"Respect your body. It’s the only one you get."'
-    },
-    {
-        "title": "Unknown",
-        "content": '"Dead last finish is greater than did not finish, which trumps did not start."'
+        "title": "Jim Rohn",
+        "content": "'Take care of your body. It's the only place you have to live.'"
     },
     {
         "title": "Abraham Lincoln",
@@ -88,8 +29,8 @@ var posts = [
         "content": '"Work hard in silence. Let success be your noise."'
     },
     {
-        "title": "Unknown",
-        "content": '"Rome wasn’t built in a day, but they worked on it every single day."'
+        "title": "Mahatma Gandhi",
+        "content": '"Strength does not come from physical capacity. It comes from an indomitable will."'
     },
     {
         "title": "Unknown",
@@ -98,6 +39,22 @@ var posts = [
     {
         "title": "Unknown",
         "content": '"Strive for progress, not perfection."'
+    },
+    {
+        "title": "Jerry Rice",
+        "content": '"Today I will do what others won’t, so tomorrow I can accomplish what others can’t."'
+    },
+    {
+        "title": "Aristotle",
+        "content": '"We are what we repeatedly do. Excellence then is not an act but a habit."'
+    },
+    {
+        "title": "Tommy Lasorda",
+        "content": '"We are what we repeatedly do. Excellence then is not an act but a habit."'
+    },
+    {
+        "title": "Maya Angelou",
+        "content": '"Nothing will work unless you do."'
     }
 ]
 
