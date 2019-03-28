@@ -106,17 +106,17 @@ function getQuote() {
     var title = $(".title").text(item.title);
     var quote = $(".content").html(item["content"]);
 };
-$( document ).ready(function() {
+$(document).ready(function () {
     getQuote();
-    $("#height").keyup(function(event) {
+    $("#height").keyup(function (event) {
         if (event.keyCode === 13) {
             $("#BMIbutton").click();
         }
     });
-    
-    $("#BMIbutton").click(function() {
+
+    $("#BMIbutton").click(function () {
         calculateBMI();
-      });
+    });
 });
 
 function calculateBMI() {
@@ -124,8 +124,8 @@ function calculateBMI() {
     var weight = document.getElementById("weight").value;
     var BMI = weight / (height * height);
     var roundedBMI = BMI.toFixed(5);
-    document.getElementById("BMItext").style.display = "inline-block";
-    document.getElementById("BMI").text = roundedBMI;
+    document.getElementById("BMItext").innerHTML = "YOUR BMI: ";
+    document.getElementById("BMI").innerHTML = roundedBMI;
     var BMIexplanation = document.getElementById("BMIexplanation");
     if (BMI <= 18.4) {
         BMIexplanation.innerHTML = "You are underweight";
@@ -146,20 +146,20 @@ function calculateBMI() {
 }
 
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-document.getElementById("myBtn").style.display = "block";
-} else {
-document.getElementById("myBtn").style.display = "none";
-}
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
 }
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 
