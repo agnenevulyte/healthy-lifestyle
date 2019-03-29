@@ -83,6 +83,7 @@ function calculateBMI() {
     var roundedBMI = BMI.toFixed(5);
     document.getElementById("BMItext").innerHTML = "YOUR BMI: ";
     document.getElementById("BMI").innerHTML = roundedBMI;
+    document.getElementById("BMI-calc").style.display = "block"
     var BMIexplanation = document.getElementById("BMIexplanation");
     if (roundedBMI <= 18.4) {
         BMIexplanation.innerHTML = "You are underweight";

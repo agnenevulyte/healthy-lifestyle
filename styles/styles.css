@@ -311,3 +311,7 @@ p {
   .nav-tabs {
       border-bottom: none;
   }
+
+  #BMI-calc {
+      display: none;
+  }
