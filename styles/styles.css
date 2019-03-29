@@ -260,7 +260,8 @@ p {
   @media(max-width: 767px) {
     iframe {
         height: 240px;
-        width: 250px;
+        /* width: 250px; */
+        width: 245px;
     }
     .bodypump {
         max-width: 100%;
