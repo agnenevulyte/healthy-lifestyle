@@ -83,11 +83,15 @@ p {
     font-size: 16px;  
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+/* @media (min-width: 768px) and (max-width: 991px) {
     #BMIbutton {
-        /* margin-left: 40px; */
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
-}
+} */
 
 @media (max-width: 460px) {
     #blockBMI .col-xs-6 {
@@ -104,7 +108,11 @@ p {
 @media(min-width: 768px) {
     #BMIbutton {
         float: left;
-        margin-top: -2px;
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
     #weight {
         float: right;
@@ -221,6 +229,18 @@ p {
       max-height: 250px;
       max-width: 250px;
   }
+@media (min-width:461px) and (max-width:575px) {
+    #blockBMI input {
+        width: 175px;
+    }
+    #blockBMI #weight {
+        float: right;
+    }
+    #blockBMI #height {
+        float: left;
+    }
+}
+
 @media (max-width: 575px) {
     .blog-img {
         width: 100%;
