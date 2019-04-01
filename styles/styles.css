@@ -222,7 +222,12 @@ p {
   #blockBMI input {
     padding: 5px;
     border-radius: 10px;
-  } 
+  }
+  
+  #blockBMI {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 
   .blog-img {
       width: 100%;
@@ -347,4 +352,12 @@ p {
 
   #BMI-calc-explanation {
       display: none;
+  }
+
+  /* social media */
+  .social-media img {
+    width: 40px;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-right: 7px;
   }
