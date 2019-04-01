@@ -1,7 +1,8 @@
 body, html {
     height: 100%;
     background-color: #0E1E2F;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* The hero image */
@@ -277,7 +278,8 @@ p {
         padding-bottom: 10px;
     }
     .bodypump {
-        height: 267px;
+        /* height: 267px; */
+        height: 290px;
         /* margin-bottom: 28px; */
         max-width: 100%;
         }
