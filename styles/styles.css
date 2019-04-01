@@ -85,7 +85,7 @@ p {
 
 @media (min-width: 768px) and (max-width: 991px) {
     #BMIbutton {
-        margin-left: 40px;
+        /* margin-left: 40px; */
     }
 }
 
@@ -282,7 +282,13 @@ p {
         height: 296px;
         /* margin-bottom: 28px; */
         max-width: 100%;
-        }
+    }
+    #blockBMI input {
+        width: 175px;
+    }
+    #blockBMI {
+        margin-left: 16px;
+    }
   }
 
   @media(min-width: 992px) {
